@@ -1,0 +1,435 @@
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+  font-display: swap;
+  src: url("../fonts/OpenSans-BoldItalic.woff") format("woff"), url("../fonts/OpenSans-BoldItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Italic";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Italic.woff") format("woff"), url("../fonts/OpenSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBoldItalic";
+  font-display: swap;
+  src: url("../fonts/OpenSans-ExtraBoldItalic.woff") format("woff"), url("../fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Light";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-LightItalic";
+  font-display: swap;
+  src: url("../fonts/OpenSans-LightItalic.woff") format("woff"), url("../fonts/OpenSans-LightItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-SemiBoldItalic";
+  font-display: swap;
+  src: url("../fonts/OpenSans-SemiBoldItalic.woff") format("woff"), url("../fonts/OpenSans-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+a,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="radio"].visually-hidden,
+input[type="checkbox"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.page {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'OpenSans-Regular', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FED74B;
+  border: 1px solid #CBA500;
+  border-radius: 20px;
+  padding: 5px 40px;
+  font-size: 14px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #CBA500;
+  color: #fff;
+}
+
+.d-none {
+  display: none;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 0;
+  gap: 30px;
+}
+
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #828282;
+}
+
+.card__preview {
+  position: relative;
+  height: 220px;
+}
+
+.card__preview img {
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 999;
+  padding: 8px 20px;
+  background-color: #FFD83B;
+  text-transform: uppercase;
+}
+
+.card__description {
+  padding-right: 10px;
+}
+
+.card__description-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 12px;
+}
+
+.card__duration {
+  position: relative;
+  display: block;
+  margin: 4px 0 16px;
+  padding-left: 25px;
+  color: #9E9E9E;
+  font-size: 12px;
+}
+
+.no-webp .card__duration::before {
+  background: url("../img/clock-circular-outline.png") no-repeat center; }
+
+.card__duration::before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  margin-right: 9px;
+  z-index: 999;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.card__title {
+  font-size: 14px;
+  margin-bottom: 21px;
+  max-width: 557px;
+}
+
+.card-list {
+  list-style: none;
+}
+
+.card-list__item {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 25px;
+}
+
+.no-webp .card-list__item::before {
+  background: url("../img/check-mark.png") no-repeat; }
+
+.card-list__item::before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  left: 0;
+}
+
+.time {
+  background-color: #D9E8FF;
+  padding: 5px 10px;
+  border-radius: 11px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 0;
+}
+
+.time-input {
+  display: none;
+}
+
+.time-input:checked + .time {
+  background: #6BA6FF;
+  color: #ffffff;
+}
+
+.time label {
+  cursor: pointer;
+}
+
+.time:hover {
+  background-color: #6ba6ff;
+  color: #fff;
+}
+
+.time-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 10px 5px;
+  margin-top: 7px;
+  max-width: 250px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 51px;
+}
+
+.card-price-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.card-price__currency {
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.other-price {
+  display: block;
+  font-size: 10px;
+}
+
+@media (min-width: 400px) {
+  .card__preview {
+    height: 320px;
+  }
+
+  .card__preview img {
+    height: 320px;
+  }
+}
+
+@media (min-width: 600px) {
+  .time-wrap {
+    margin-top: 0;
+    margin-left: 5px;
+  }
+
+  .card-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .card__preview {
+    height: 420px;
+  }
+
+  .card__preview img {
+    height: 420px;
+  }
+}
+
+@media (min-width: 800px) {
+  .cards {
+    max-width: 1070px;
+    margin: auto;
+  }
+
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .card__preview {
+    width: 463px;
+    height: 369px;
+  }
+
+  .card__preview img {
+    min-height: 369px;
+  }
+
+  .card__title {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+
+.webp .card__duration::before { background: url(../img/clock-circular-outline.webp) no-repeat center; }
+
+.webp .card-list__item::before { background: url(../img/check-mark.webp) no-repeat; }
