@@ -177,6 +177,7 @@ button {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s;
+  color: #000;
 }
 
 .btn:hover {
@@ -385,6 +386,16 @@ button {
     margin-left: 5px;
   }
 
+  .card__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .card-list__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -392,11 +403,11 @@ button {
   }
 
   .card__preview {
-    height: 420px;
+    height: 480px;
   }
 
   .card__preview img {
-    height: 420px;
+    height: 480px;
   }
 }
 
