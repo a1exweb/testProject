@@ -19,11 +19,20 @@ testWebP(function (support) {
 });
 document.addEventListener('DOMContentLoaded', function () {
   var timeWrap = document.querySelectorAll('.time-wrap');
-  var timeWrapItem = document.querySelectorAll('.time-wrap .time');
   var btnMore = document.querySelectorAll('button.time');
   timeWrap.forEach(function (item, i) {
     item.dataset.indexCardTimeBlock = i;
     var dataIndexCardTimeBlock = document.querySelectorAll("[data-index-card-time-block=\"".concat(i, "\"] > .time"));
+
+    if (dataIndexCardTimeBlock.length === 5) {
+      console.log(dataIndexCardTimeBlock);
+      dataIndexCardTimeBlock.forEach(function (item) {
+        if (item.tagName === 'BUTTON') {
+          item.remove();
+        }
+      });
+    }
+
     dataIndexCardTimeBlock.forEach(function (item, i) {
       item.dataset.indexTime = i + 1;
 
