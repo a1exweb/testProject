@@ -23,10 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var btnMore = document.querySelectorAll('button.time');
   timeWrap.forEach(function (item, i) {
     item.dataset.indexCardTimeBlock = i;
-    document.querySelectorAll("[data-index-card-time-block=\"".concat(i, "\"] > .time")).forEach(function (item, i) {
+    var dataIndexCardTimeBlock = document.querySelectorAll("[data-index-card-time-block=\"".concat(i, "\"] > .time"));
+    dataIndexCardTimeBlock.forEach(function (item, i) {
       item.dataset.indexTime = i + 1;
 
-      if (item.dataset.indexTime > 4 && item.dataset.indexTime < timeWrapItem.length / timeWrap.length) {
+      if (item.dataset.indexTime > 4 && item.dataset.indexTime < dataIndexCardTimeBlock.length) {
         item.previousElementSibling.previousElementSibling.classList.add('d-none');
         item.classList.add('d-none');
       }

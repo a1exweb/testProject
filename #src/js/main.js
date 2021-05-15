@@ -24,10 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   timeWrap.forEach((item, i) => {
     item.dataset.indexCardTimeBlock = i;
-    document.querySelectorAll(`[data-index-card-time-block="${i}"] > .time`).forEach((item, i) => {
+    const dataIndexCardTimeBlock = document.querySelectorAll(`[data-index-card-time-block="${i}"] > .time`)
+    
+    dataIndexCardTimeBlock.forEach((item, i) => {
 
       item.dataset.indexTime = i + 1;
-      if (item.dataset.indexTime > 4 && item.dataset.indexTime < timeWrapItem.length / timeWrap.length) {
+      if (item.dataset.indexTime > 4 && item.dataset.indexTime < dataIndexCardTimeBlock.length) {
         item.previousElementSibling.previousElementSibling.classList.add('d-none');
         item.classList.add('d-none');
       }
